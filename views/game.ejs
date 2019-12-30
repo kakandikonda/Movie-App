@@ -1,0 +1,51 @@
+<head>
+    <Title>Trident Films</Title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+</head>
+<style>
+    img{
+        height: 50px;
+    }
+</style>
+<nav class="navbar navbar-light bg-light">
+  <img href="/" onClick="window.location='/'" class="nav-logo" id="navimg" src="https://png2.kisspng.com/sh/fb02c0207fead2c98f5838f014a0f4b2/L0KzQYm3V8A0N5l6iJH0aYP2gLBuTfxwb5CyiNH8ZXnnf7A0lQJqbJZzjJ98eX3lf720VfI0apNpeqgBZUe7Q4S1UsEzPWQ2UKk6NUOzRoW4WMQ3PGY3TZD5bne=/kisspng-logo-poseidon-trident-symbol-5b3bbdb66e7833.2125318715306418464525.png">
+  
+ </nav>
+ <br>
+ <div class="container">
+     <h1>Movie guessing game</h1>
+<br>
+<h4>Hidden Movie Details</h4>
+<h4>PG-13 | 123 min | 08 Mar 2019</h4>
+<br>
+<h4>Cast:Brie Larson, Samuel L. Jackson, Ben Mendelsohn, Jude Law</h4>
+<br>
+        <h4>Metascore: 64/100</h4>
+        <h4>IMDB Rating 7.1/10</h4>
+<h4>Summary of ??????, Carol Danvers becomes one of the universe's most power heroes when Earth is caught in the middle of a galactic war between two alien races.</h4>
+
+<p id="demo1" onclick="revealButton1()">1)Avengers: Infinity War</p>
+<p id="demo2" onclick="revealButton2()">2)Captain Marvel</p>
+<p id="demo3" onclick="revealButton3()">3)Cars 3</p>
+
+ </div>
+
+<script>
+    function revealButton1(){
+        document.getElementById("demo1").textContent = "False!! The movie was: Captain Marvel"
+    }
+</script>
+<script>
+    function revealButton2(){
+        document.getElementById("demo2").textContent = "Correct!!! The movie was: Captain Marvel"
+    }
+</script>
+<script>
+    function revealButton3(){
+        document.getElementById("demo3").textContent = "False!! The movie was: Captain Marvel"
+    }
+</script>

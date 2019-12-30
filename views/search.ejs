@@ -1,0 +1,30 @@
+<head>
+    <Title>Trident Films</Title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+<style>
+    #navimg{
+        height: 50px;
+    }
+    .jumbotron{
+       background-color: white;
+    }
+</style>
+<nav class="navbar navbar-light bg-light">
+  <img href="/" onClick="window.location='/'" class="nav-logo" id="navimg" src="https://png2.kisspng.com/sh/fb02c0207fead2c98f5838f014a0f4b2/L0KzQYm3V8A0N5l6iJH0aYP2gLBuTfxwb5CyiNH8ZXnnf7A0lQJqbJZzjJ98eX3lf720VfI0apNpeqgBZUe7Q4S1UsEzPWQ2UKk6NUOzRoW4WMQ3PGY3TZD5bne=/kisspng-logo-poseidon-trident-symbol-5b3bbdb66e7833.2125318715306418464525.png">
+ </nav>
+<div class="container">
+    <div class="jumbotron">
+        <h1>Search For Movies</h1>
+        <br>
+        <form action="/results" method="GET">
+            <input class="form-control" type="text" placeholder="Search Movie" name="search">
+            <br>
+            <button class="btn btn-info" type="submit">Submit</button>
+        </form>
+        <h1><a href="/game">Or Play Our Movie guessing game!</a></h1>
+        
+    </div>
+</div>
+

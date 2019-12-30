@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<head>
+    <Title>Trident Films</Title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+</head>
+
+<style>
+    ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+li {
+	background: #fff;
+	height: 100px;
+	line-height: 40px;
+	color: #666;
+}
+li:nth-child(2n){
+	background: #f7f7f7;
+}
+#container {
+	width: 360px;
+	margin: 100px auto;
+	background: #f7f7f7;
+	box-shadow: 0 0 3px rgba(0,0,0, 0.1);
+}
+img{
+    
+    height: 100px;
+}
+
+#navimg{
+    height: 50px;
+}
+
+</style>
+<body>
+    <nav class="navbar navbar-light bg-light">
+  <img href="/" onClick="window.location='/'" class="nav-logo" id="navimg" src="https://png2.kisspng.com/sh/fb02c0207fead2c98f5838f014a0f4b2/L0KzQYm3V8A0N5l6iJH0aYP2gLBuTfxwb5CyiNH8ZXnnf7A0lQJqbJZzjJ98eX3lf720VfI0apNpeqgBZUe7Q4S1UsEzPWQ2UKk6NUOzRoW4WMQ3PGY3TZD5bne=/kisspng-logo-poseidon-trident-symbol-5b3bbdb66e7833.2125318715306418464525.png">
+  
+ </nav>
+    <div class="container">
+        <br>
+        <br>
+        <form action="/results" method="GET">
+            <input class="form-control" type="text" placeholder="Search Movie" name="search">
+            <br>
+            <button class="btn btn-info" type="submit">Submit</button>
+        </form>
+    </div>
+    <br>
+    <br>
+    <div class="container">
+        <form action="/final?movie" method="GET">
+            <ul>
+            <% data["Search"].forEach(function(movie) { %>
+            <li name="movieTitle">
+                
+                <img src="<%= movie["Poster"] %>">
+                
+                   <a href="/final?movie=<%=movie["imdbID"]%>"><%= movie["Title"] %></a>
+                    
+                    - <%= movie["Year"] %>
+                
+            </li>
+            <br>
+            <% }) %>
+        </ul>
+        </form>
+        
+        
+        
+
+    </div>
+</body>
+    
+
+<script>
+    $("li").on("click", function(){
+        console.log(this);
+    });
+</script>
